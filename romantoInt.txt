@@ -1,0 +1,69 @@
+class Solution:
+    def convert(self,roman):
+        if (roman == "I"):
+            return 1
+        else if (roman == "V"):
+            return 5
+        else if (roman == "X"):
+            return 10
+        else if (roman == "L" ):
+            return 50
+        else if (roamn == "C"):
+            return 100
+        else if (roman == "D"):
+            return 500
+        else if (roman == "M"):
+            return 1000    
+    
+  def checkSmaller(self,character, pos, s,num):
+        if ( pos < 0 or convert(s[pos] > s[pos+1]):
+            return num
+        elif (s[i]== "M"):
+            checkSmaller(character, pos-1, s, num-1000)
+        elif (s[i] == "D"):
+            num-=500
+            checkSmaller(character, pos-1, s, num-500)
+        elif (s[i] == "C"):
+            checkSmaller(character, pos-1, s, num-100)
+        elif (s[i] == "L"):
+            checkSmaller(character,pos-1, s, num-50)
+        elif (s[i] == "X"):
+            checkSmaller(character, pos-1, s num-10)
+        elif (s[i] == "V"):
+            checkSmaller(character, pos-1, s, num-5)
+        elif (s[i]) == "I"):
+            checkSmaller(character, pos-1, s, num-1)
+
+
+  
+
+      def romanToInteger():
+        
+        if ("M" in s):
+            largestCharacter.append("M")
+        if ("D" in s):
+            largestCharacter.append("D")
+        if "C" in s:
+            largestCharacter.append("C")
+        if "L" in s:
+            largestCharacter.append("L")
+        if "X" in s:
+            largestCharacter.append("X")
+        if "V" in s:
+            largestCharacter.append("V")
+        if ("I" in s):
+            largestCharacter.append("I")
+        
+        k = 0
+        sum = 0
+        for i,num in enumerate(S):
+            if num[i] == largestCharacter[k]:
+                sum+= checkSmaller(pos, s,convert(num[i])):
+        return sum
+
+
+
+
+
+
+
