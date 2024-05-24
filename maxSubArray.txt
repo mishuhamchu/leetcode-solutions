@@ -1,0 +1,40 @@
+class Solution(object):
+
+    def isNegative(self, nums):
+        for num in nums:
+            if num >= 0:
+                return False
+        return True
+
+
+    def maxSubArray(self, nums):
+        maxRet = nums[0]
+        sumSoFar = nums[0]
+        if (len(nums) == 1):
+                return nums[0]
+                
+        if (self.isNegative(nums)):
+            return max(nums)
+
+        else:
+
+
+            
+
+            for i in range(1,len(nums)):
+            
+
+                if (sumSoFar < 0 and nums[i] > sumSoFar):
+                    sumSoFar = nums[i]
+                else:
+                    sumSoFar+=nums[i]
+                if ( sumSoFar > maxRet):
+                    maxRet = (sumSoFar)
+                    #print("ENTERED AND THIS IS THE SUMSOFAR:" + str(sumSoFar))
+                #print("this is the sum so far: " + str(sumSoFar))
+               #print("this is nums[i]:" + str(nums[i]))
+
+              #  print("this is maxRet: " + str(maxRet))
+        return maxRet
+
+        
