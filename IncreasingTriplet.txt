@@ -1,0 +1,16 @@
+class Solution:
+    def increasingTriplet(self, nums: List[int]) -> bool:
+        lstTuple = []
+        for i,num in enumerate(nums):
+            lstTuple.append( (num, i))
+
+        SortedTuple= sorted(lstTuple)
+        print(SortedTuple)
+        for i,tupy in enumerate(SortedTuple):
+            count = 0
+            for j in range(i+1, len(nums)-1):
+                if SortedTuple[j][1] > tupy[1]:
+                    count+=1
+                if (count>=2):
+                    return True
+        return False
