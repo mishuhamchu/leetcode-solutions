@@ -1,0 +1,14 @@
+class Solution:
+    def reverseWords(self, s: str) -> str:
+        newStr = ""
+        s2 = s.split(' ')
+        s2Index = len(s2)-1
+        while(s2Index >= 0):
+            if (s2Index != 0):
+                newStr+=s2[s2Index] + " "
+            else:
+                newStr+=s2[s2Index]
+            s2Index-=1
+        return newStr
+
+
