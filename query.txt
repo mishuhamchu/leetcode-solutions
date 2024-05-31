@@ -1,0 +1,15 @@
+SELECT SUM(tiv_2016) AS TotalTIV2016
+FROM (
+    SELECT tiv_2016
+    FROM Employees e
+    WHERE 
+        EXISTS (
+            SELECT 1 
+            FROM Employees e2 
+            WHERE e2.tapp_2015 = e.tiv_2016
+        )
+        AND NOT EXISTS (
+            SELECT 1 
+            FROM Employees e2 
+            WHERE e2.lat = e.lat AND e2.lon = e.lon AND e2.employee_id != e.employee_id
+        )
